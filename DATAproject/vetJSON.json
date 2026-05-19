@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=STUDENT8\\SQLEXPRESS;Database=VETproject_18_05;Trusted_Connection=True;TrustServerCertificate=True"
+  }
+}
