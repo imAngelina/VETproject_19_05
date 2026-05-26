@@ -1,6 +1,6 @@
 ﻿namespace VETproject
 {
-    partial class EmployeeMenuForm
+    partial class Employee_SeeAppointments
     {
         /// <summary>
         /// Required designer variable.
@@ -29,44 +29,45 @@
         private void InitializeComponent()
         {
             button1 = new Button();
-            button2 = new Button();
+            dataGridView1 = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(271, 143);
+            button1.Location = new Point(245, 88);
             button1.Name = "button1";
-            button1.Size = new Size(223, 29);
+            button1.Size = new Size(297, 29);
             button1.TabIndex = 0;
-            button1.Text = "Edit my type";
+            button1.Text = "List my appointments";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // button2
+            // dataGridView1
             // 
-            button2.Location = new Point(271, 222);
-            button2.Name = "button2";
-            button2.Size = new Size(223, 29);
-            button2.TabIndex = 1;
-            button2.Text = "see  my appointments";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(35, 164);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(725, 257);
+            dataGridView1.TabIndex = 1;
             // 
-            // EmployeeMenuForm
+            // Employee_SeeAppointments
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button2);
+            Controls.Add(dataGridView1);
             Controls.Add(button1);
-            Name = "EmployeeMenuForm";
-            Text = "EmployeeMenuForm";
+            Name = "Employee_SeeAppointments";
+            Text = "Employee_SeeAppointments";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Button button1;
-        private Button button2;
+        private DataGridView dataGridView1;
     }
 }

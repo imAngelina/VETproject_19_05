@@ -44,7 +44,7 @@ namespace VETproject
             else if (user.Role == UserRole.Employee)
             {
                 EmployeeMenuForm form =
-                    new EmployeeMenuForm();
+                    new EmployeeMenuForm(FindCurrentUser());
 
                 form.ShowDialog();
             }

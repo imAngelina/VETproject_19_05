@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CONTROLLERproject;
+using DATAproject.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,12 @@ namespace VETproject
         public Admin_AppointmentsForm()
         {
             InitializeComponent();
+        }
+        AppointmentController contr = new AppointmentController();
+        private async void button1_Click(object sender, EventArgs e)
+        {
+            List<Appointment> s = await contr.GetAllAsync();
+            dataGridView1.DataSource = s.Select(x => new { x.Id, x.DateTime, x.Reason, x.Pet.Name,  x.Pet.Owner.FullName}).ToList();
         }
     }
 }

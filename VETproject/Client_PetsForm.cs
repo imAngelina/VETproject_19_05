@@ -34,6 +34,7 @@ namespace VETproject
         private async void button1_Click(object sender, EventArgs e)
         {
             List<Pet> s = await contr.GetAllAsync();
+            s=s.Where(x=>x.OwnerId==UserCurrent.Id).ToList();
             dataGridView1.DataSource = s.Select(x => new { x.Id, x.Name, x.Age, x.Breed.Animal.Type }).ToList();
         }
 

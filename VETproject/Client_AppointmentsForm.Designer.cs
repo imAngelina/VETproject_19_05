@@ -33,10 +33,28 @@
             dataGridView1 = new DataGridView();
             button1 = new Button();
             tabPage2 = new TabPage();
+            button2 = new Button();
+            dateTimePicker1 = new DateTimePicker();
+            textBox5 = new TextBox();
+            textBox4 = new TextBox();
+            textBox3 = new TextBox();
+            textBox2 = new TextBox();
+            textBox1 = new TextBox();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
             tabPage3 = new TabPage();
+            textBox6 = new TextBox();
+            label7 = new Label();
+            button3 = new Button();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            tabPage2.SuspendLayout();
+            tabPage3.SuspendLayout();
             SuspendLayout();
             // 
             // tabControl1
@@ -83,6 +101,19 @@
             // 
             // tabPage2
             // 
+            tabPage2.Controls.Add(button2);
+            tabPage2.Controls.Add(dateTimePicker1);
+            tabPage2.Controls.Add(textBox5);
+            tabPage2.Controls.Add(textBox4);
+            tabPage2.Controls.Add(textBox3);
+            tabPage2.Controls.Add(textBox2);
+            tabPage2.Controls.Add(textBox1);
+            tabPage2.Controls.Add(label6);
+            tabPage2.Controls.Add(label5);
+            tabPage2.Controls.Add(label4);
+            tabPage2.Controls.Add(label3);
+            tabPage2.Controls.Add(label2);
+            tabPage2.Controls.Add(label1);
             tabPage2.Location = new Point(4, 29);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
@@ -91,8 +122,117 @@
             tabPage2.Text = "Add";
             tabPage2.UseVisualStyleBackColor = true;
             // 
+            // button2
+            // 
+            button2.Location = new Point(486, 297);
+            button2.Name = "button2";
+            button2.Size = new Size(116, 29);
+            button2.TabIndex = 12;
+            button2.Text = "Add";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(301, 150);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(301, 27);
+            dateTimePicker1.TabIndex = 11;
+            // 
+            // textBox5
+            // 
+            textBox5.Location = new Point(312, 222);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(290, 27);
+            textBox5.TabIndex = 10;
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(312, 185);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(290, 27);
+            textBox4.TabIndex = 9;
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(312, 115);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(290, 27);
+            textBox3.TabIndex = 8;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(312, 78);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(290, 27);
+            textBox2.TabIndex = 7;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(312, 43);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(290, 27);
+            textBox1.TabIndex = 6;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(73, 225);
+            label6.Name = "label6";
+            label6.Size = new Size(57, 20);
+            label6.TabIndex = 5;
+            label6.Text = "Reason";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(73, 188);
+            label5.Name = "label5";
+            label5.Size = new Size(42, 20);
+            label5.TabIndex = 4;
+            label5.Text = "Time";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(73, 152);
+            label4.Name = "label4";
+            label4.Size = new Size(41, 20);
+            label4.TabIndex = 3;
+            label4.Text = "Date";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(73, 115);
+            label3.Name = "label3";
+            label3.Size = new Size(73, 20);
+            label3.TabIndex = 2;
+            label3.Text = "Service id";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(73, 78);
+            label2.Name = "label2";
+            label2.Size = new Size(92, 20);
+            label2.TabIndex = 1;
+            label2.Text = "Employee id";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(73, 41);
+            label1.Name = "label1";
+            label1.Size = new Size(46, 20);
+            label1.TabIndex = 0;
+            label1.Text = "Pet id";
+            // 
             // tabPage3
             // 
+            tabPage3.Controls.Add(button3);
+            tabPage3.Controls.Add(label7);
+            tabPage3.Controls.Add(textBox6);
             tabPage3.Location = new Point(4, 29);
             tabPage3.Name = "tabPage3";
             tabPage3.Padding = new Padding(3);
@@ -100,6 +240,32 @@
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Delete";
             tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // textBox6
+            // 
+            textBox6.Location = new Point(321, 93);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(125, 27);
+            textBox6.TabIndex = 0;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(168, 93);
+            label7.Name = "label7";
+            label7.Size = new Size(114, 20);
+            label7.TabIndex = 1;
+            label7.Text = "Appointment id";
+            // 
+            // button3
+            // 
+            button3.Location = new Point(291, 205);
+            button3.Name = "button3";
+            button3.Size = new Size(94, 29);
+            button3.TabIndex = 2;
+            button3.Text = "Delete";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // Client_AppointmentsForm
             // 
@@ -112,6 +278,10 @@
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            tabPage2.ResumeLayout(false);
+            tabPage2.PerformLayout();
+            tabPage3.ResumeLayout(false);
+            tabPage3.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -123,5 +293,21 @@
         private Button button1;
         private TabPage tabPage2;
         private TabPage tabPage3;
+        private TextBox textBox1;
+        private Label label6;
+        private Label label5;
+        private Label label4;
+        private Label label3;
+        private Label label2;
+        private Label label1;
+        private Button button2;
+        private DateTimePicker dateTimePicker1;
+        private TextBox textBox5;
+        private TextBox textBox4;
+        private TextBox textBox3;
+        private TextBox textBox2;
+        private Button button3;
+        private Label label7;
+        private TextBox textBox6;
     }
 }

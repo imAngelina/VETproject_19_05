@@ -51,12 +51,7 @@ namespace CONTROLLERproject
                 .FirstOrDefaultAsync(x => x.Id == id);
         }
 
-        public async Task CreateAsync(Appointment appointment)
-        {
-            await context.Appointments.AddAsync(appointment);
-
-            await context.SaveChangesAsync();
-        }
+       
 
         
 
@@ -71,6 +66,29 @@ namespace CONTROLLERproject
 
                 await context.SaveChangesAsync();
             }
+        }
+        public async Task<bool> IsAppointmentTakenAsync(DateTime dateTime, int employeeId)
+        {
+            return await context.Appointments
+                .AnyAsync(x => x.EmployeeId == employeeId
+                            && x.DateTime == dateTime);
+        }
+
+        public async Task<bool> CreateAppointmentAsync(Appointment appointment)
+        {
+            bool isTaken = await IsAppointmentTakenAsync(
+                appointment.DateTime,
+                appointment.EmployeeId);
+
+            if (isTaken)
+            {
+                return false;
+            }
+
+            await context.Appointments.AddAsync(appointment);
+            await context.SaveChangesAsync();
+
+            return true;
         }
     }
 }
