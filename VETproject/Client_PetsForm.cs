@@ -34,13 +34,13 @@ namespace VETproject
         private async void button1_Click(object sender, EventArgs e)
         {
             List<Pet> s = await contr.GetAllAsync();
-            s=s.Where(x=>x.OwnerId==UserCurrent.Id).ToList();
+            s = s.Where(x => x.OwnerId == UserCurrent.Id).ToList();
             dataGridView1.DataSource = s.Select(x => new { x.Id, x.Name, x.Age, x.Breed.Animal.Type }).ToList();
         }
 
         private async void button2_Click(object sender, EventArgs e)
         {
-           
+
             if (context.Breeds.Find(int.Parse(textBox3.Text)) == null) { MessageBox.Show("invalid breed id"); return; }
             Pet a = new Pet
             {
@@ -59,7 +59,7 @@ namespace VETproject
 
         private async void button3_Click(object sender, EventArgs e)
         {
-            
+
             if (context.Breeds.Find(int.Parse(textBox4.Text)) == null) { MessageBox.Show("invalid breed id"); return; }
             Pet a = new Pet
             {
@@ -87,6 +87,11 @@ namespace VETproject
 
             MessageBox.Show("pet deleted");
             textBox8.Clear();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

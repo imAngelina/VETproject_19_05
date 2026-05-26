@@ -47,9 +47,9 @@
             label2 = new Label();
             label1 = new Label();
             tabPage3 = new TabPage();
-            textBox6 = new TextBox();
-            label7 = new Label();
             button3 = new Button();
+            label7 = new Label();
+            textBox6 = new TextBox();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -62,6 +62,7 @@
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Controls.Add(tabPage3);
+            tabControl1.Font = new Font("Cambria", 10.2F);
             tabControl1.Location = new Point(21, 22);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
@@ -70,6 +71,7 @@
             // 
             // tabPage1
             // 
+            tabPage1.BackColor = Color.FromArgb(252, 227, 249);
             tabPage1.Controls.Add(dataGridView1);
             tabPage1.Controls.Add(button1);
             tabPage1.Location = new Point(4, 29);
@@ -78,10 +80,10 @@
             tabPage1.Size = new Size(739, 357);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "ListAll";
-            tabPage1.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = Color.Snow;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(46, 121);
             dataGridView1.Name = "dataGridView1";
@@ -91,16 +93,19 @@
             // 
             // button1
             // 
-            button1.Location = new Point(312, 41);
+            button1.BackColor = Color.FromArgb(242, 203, 237);
+            button1.Font = new Font("Cambria", 10.8F, FontStyle.Bold | FontStyle.Italic);
+            button1.Location = new Point(298, 47);
             button1.Name = "button1";
-            button1.Size = new Size(94, 29);
+            button1.Size = new Size(122, 42);
             button1.TabIndex = 0;
             button1.Text = "List all";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // tabPage2
             // 
+            tabPage2.BackColor = Color.FromArgb(252, 227, 249);
             tabPage2.Controls.Add(button2);
             tabPage2.Controls.Add(dateTimePicker1);
             tabPage2.Controls.Add(textBox5);
@@ -120,16 +125,17 @@
             tabPage2.Size = new Size(739, 357);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Add";
-            tabPage2.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            button2.Location = new Point(486, 297);
+            button2.BackColor = Color.FromArgb(242, 203, 237);
+            button2.Font = new Font("Cambria", 10.8F, FontStyle.Bold | FontStyle.Italic);
+            button2.Location = new Point(441, 287);
             button2.Name = "button2";
-            button2.Size = new Size(116, 29);
+            button2.Size = new Size(161, 42);
             button2.TabIndex = 12;
             button2.Text = "Add";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
             // dateTimePicker1
@@ -141,6 +147,7 @@
             // 
             // textBox5
             // 
+            textBox5.BackColor = Color.Snow;
             textBox5.Location = new Point(312, 222);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(290, 27);
@@ -148,6 +155,7 @@
             // 
             // textBox4
             // 
+            textBox4.BackColor = Color.Snow;
             textBox4.Location = new Point(312, 185);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(290, 27);
@@ -155,6 +163,7 @@
             // 
             // textBox3
             // 
+            textBox3.BackColor = Color.Snow;
             textBox3.Location = new Point(312, 115);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(290, 27);
@@ -162,6 +171,7 @@
             // 
             // textBox2
             // 
+            textBox2.BackColor = Color.Snow;
             textBox2.Location = new Point(312, 78);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(290, 27);
@@ -169,6 +179,7 @@
             // 
             // textBox1
             // 
+            textBox1.BackColor = Color.Snow;
             textBox1.Location = new Point(312, 43);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(290, 27);
@@ -177,59 +188,66 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.Font = new Font("Cambria", 12F, FontStyle.Italic);
             label6.Location = new Point(73, 225);
             label6.Name = "label6";
-            label6.Size = new Size(57, 20);
+            label6.Size = new Size(71, 23);
             label6.TabIndex = 5;
             label6.Text = "Reason";
             // 
             // label5
             // 
             label5.AutoSize = true;
+            label5.Font = new Font("Cambria", 12F, FontStyle.Italic);
             label5.Location = new Point(73, 188);
             label5.Name = "label5";
-            label5.Size = new Size(42, 20);
+            label5.Size = new Size(51, 23);
             label5.TabIndex = 4;
             label5.Text = "Time";
             // 
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Cambria", 12F, FontStyle.Italic);
             label4.Location = new Point(73, 152);
             label4.Name = "label4";
-            label4.Size = new Size(41, 20);
+            label4.Size = new Size(50, 23);
             label4.TabIndex = 3;
             label4.Text = "Date";
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Cambria", 12F, FontStyle.Italic);
             label3.Location = new Point(73, 115);
             label3.Name = "label3";
-            label3.Size = new Size(73, 20);
+            label3.Size = new Size(88, 23);
             label3.TabIndex = 2;
             label3.Text = "Service id";
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Cambria", 12F, FontStyle.Italic);
             label2.Location = new Point(73, 78);
             label2.Name = "label2";
-            label2.Size = new Size(92, 20);
+            label2.Size = new Size(109, 23);
             label2.TabIndex = 1;
             label2.Text = "Employee id";
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Cambria", 12F, FontStyle.Italic);
             label1.Location = new Point(73, 41);
             label1.Name = "label1";
-            label1.Size = new Size(46, 20);
+            label1.Size = new Size(56, 23);
             label1.TabIndex = 0;
             label1.Text = "Pet id";
             // 
             // tabPage3
             // 
+            tabPage3.BackColor = Color.FromArgb(252, 227, 249);
             tabPage3.Controls.Add(button3);
             tabPage3.Controls.Add(label7);
             tabPage3.Controls.Add(textBox6);
@@ -239,38 +257,42 @@
             tabPage3.Size = new Size(739, 357);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Delete";
-            tabPage3.UseVisualStyleBackColor = true;
             // 
-            // textBox6
+            // button3
             // 
-            textBox6.Location = new Point(321, 93);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(125, 27);
-            textBox6.TabIndex = 0;
+            button3.BackColor = Color.FromArgb(242, 203, 237);
+            button3.Font = new Font("Cambria", 10.8F, FontStyle.Bold | FontStyle.Italic);
+            button3.Location = new Point(274, 174);
+            button3.Name = "button3";
+            button3.Size = new Size(128, 42);
+            button3.TabIndex = 2;
+            button3.Text = "Delete";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // label7
             // 
             label7.AutoSize = true;
+            label7.Font = new Font("Cambria", 12F, FontStyle.Italic);
             label7.Location = new Point(168, 93);
             label7.Name = "label7";
-            label7.Size = new Size(114, 20);
+            label7.Size = new Size(139, 23);
             label7.TabIndex = 1;
             label7.Text = "Appointment id";
             // 
-            // button3
+            // textBox6
             // 
-            button3.Location = new Point(291, 205);
-            button3.Name = "button3";
-            button3.Size = new Size(94, 29);
-            button3.TabIndex = 2;
-            button3.Text = "Delete";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            textBox6.BackColor = Color.Snow;
+            textBox6.Location = new Point(366, 93);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(125, 27);
+            textBox6.TabIndex = 0;
             // 
             // Client_AppointmentsForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(242, 203, 237);
             ClientSize = new Size(800, 450);
             Controls.Add(tabControl1);
             Name = "Client_AppointmentsForm";

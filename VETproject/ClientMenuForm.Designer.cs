@@ -34,29 +34,35 @@
             // 
             // button1
             // 
-            button1.Location = new Point(311, 126);
+            button1.BackColor = Color.FromArgb(252, 227, 249);
+            button1.Font = new Font("Cambria", 13.8F, FontStyle.Bold | FontStyle.Italic);
+            button1.Location = new Point(106, 259);
             button1.Name = "button1";
-            button1.Size = new Size(112, 29);
+            button1.Size = new Size(195, 51);
             button1.TabIndex = 0;
             button1.Text = "Pets";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // button2
             // 
-            button2.Location = new Point(311, 265);
+            button2.BackColor = Color.FromArgb(252, 227, 249);
+            button2.Font = new Font("Cambria", 13.8F, FontStyle.Bold | FontStyle.Italic);
+            button2.Location = new Point(489, 259);
             button2.Name = "button2";
-            button2.Size = new Size(112, 29);
+            button2.Size = new Size(195, 51);
             button2.TabIndex = 1;
             button2.Text = "Appointments";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
             // ClientMenuForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackgroundImage = Properties.Resources.nz;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(800, 425);
             Controls.Add(button2);
             Controls.Add(button1);
             Name = "ClientMenuForm";

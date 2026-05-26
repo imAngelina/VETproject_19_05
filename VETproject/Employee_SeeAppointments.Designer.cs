@@ -35,16 +35,19 @@
             // 
             // button1
             // 
-            button1.Location = new Point(245, 88);
+            button1.BackColor = Color.FromArgb(235, 244, 252);
+            button1.Font = new Font("Cambria", 10.8F, FontStyle.Bold | FontStyle.Italic);
+            button1.Location = new Point(242, 76);
             button1.Name = "button1";
-            button1.Size = new Size(297, 29);
+            button1.Size = new Size(299, 52);
             button1.TabIndex = 0;
             button1.Text = "List my appointments";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = Color.FromArgb(235, 244, 252);
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(35, 164);
             dataGridView1.Name = "dataGridView1";
@@ -56,6 +59,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(210, 231, 250);
             ClientSize = new Size(800, 450);
             Controls.Add(dataGridView1);
             Controls.Add(button1);

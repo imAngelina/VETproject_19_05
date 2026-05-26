@@ -35,16 +35,19 @@
             // 
             // button1
             // 
-            button1.Location = new Point(333, 67);
+            button1.BackColor = Color.Ivory;
+            button1.Font = new Font("Cambria", 10.8F, FontStyle.Bold | FontStyle.Italic);
+            button1.Location = new Point(323, 67);
             button1.Name = "button1";
-            button1.Size = new Size(94, 29);
+            button1.Size = new Size(127, 41);
             button1.TabIndex = 0;
             button1.Text = "List all";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = Color.Ivory;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(42, 129);
             dataGridView1.Name = "dataGridView1";
@@ -56,6 +59,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Bisque;
             ClientSize = new Size(800, 450);
             Controls.Add(dataGridView1);
             Controls.Add(button1);

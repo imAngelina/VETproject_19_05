@@ -36,24 +36,27 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(161, 136);
+            label1.Font = new Font("Cambria", 12F, FontStyle.Italic);
+            label1.Location = new Point(214, 136);
             label1.Name = "label1";
-            label1.Size = new Size(40, 20);
+            label1.Size = new Size(50, 23);
             label1.TabIndex = 0;
             label1.Text = "Type";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(284, 133);
+            textBox1.BackColor = Color.FromArgb(235, 244, 252);
+            textBox1.Location = new Point(323, 136);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(214, 27);
             textBox1.TabIndex = 1;
             // 
             // button1
             // 
-            button1.Location = new Point(295, 233);
+            button1.Font = new Font("Cambria", 10.8F, FontStyle.Bold | FontStyle.Italic);
+            button1.Location = new Point(311, 220);
             button1.Name = "button1";
-            button1.Size = new Size(94, 29);
+            button1.Size = new Size(109, 40);
             button1.TabIndex = 2;
             button1.Text = "Add";
             button1.UseVisualStyleBackColor = true;
@@ -63,6 +66,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(210, 231, 250);
             ClientSize = new Size(800, 450);
             Controls.Add(button1);
             Controls.Add(textBox1);

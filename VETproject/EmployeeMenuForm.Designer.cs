@@ -34,29 +34,36 @@
             // 
             // button1
             // 
-            button1.Location = new Point(271, 143);
+            button1.BackColor = Color.FromArgb(235, 244, 252);
+            button1.Font = new Font("Cambria", 13.8F, FontStyle.Bold | FontStyle.Italic);
+            button1.Location = new Point(12, 376);
             button1.Name = "button1";
-            button1.Size = new Size(223, 29);
+            button1.Size = new Size(226, 65);
             button1.TabIndex = 0;
             button1.Text = "Edit my type";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // button2
             // 
-            button2.Location = new Point(271, 222);
+            button2.BackColor = Color.FromArgb(235, 244, 252);
+            button2.Font = new Font("Cambria", 13.8F, FontStyle.Bold | FontStyle.Italic);
+            button2.Location = new Point(498, 376);
             button2.Name = "button2";
-            button2.Size = new Size(223, 29);
+            button2.Size = new Size(223, 65);
             button2.TabIndex = 1;
-            button2.Text = "see  my appointments";
-            button2.UseVisualStyleBackColor = true;
+            button2.Text = "See  my appointments";
+            button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
             // EmployeeMenuForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.FromArgb(235, 244, 252);
+            BackgroundImage = Properties.Resources.Beagle_dog_with_stethoscope_as_veterinarian___Premium_Photo;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(733, 453);
             Controls.Add(button2);
             Controls.Add(button1);
             Name = "EmployeeMenuForm";
