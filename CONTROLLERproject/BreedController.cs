@@ -21,13 +21,7 @@ namespace CONTROLLERproject
                 .ToListAsync();
         }
 
-        public async Task<Breed?> GetByIdAsync(int id)
-        {
-            return await context.Breeds
-                .Include(x => x.Animal)
-                .FirstOrDefaultAsync(x => x.Id == id);
-        }
-
+      
         public async Task CreateAsync(Breed breed)
         {
             await context.Breeds.AddAsync(breed);

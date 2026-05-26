@@ -22,21 +22,7 @@ namespace CONTROLLERproject
                 .ToListAsync();
         }
 
-        public async Task<List<Pet>> GetByOwnerAsync(int ownerId)
-        {
-            return await context.Pets
-                .Include(x => x.Breed)
-                .Where(x => x.OwnerId == ownerId)
-                .ToListAsync();
-        }
-
-        public async Task<Pet?> GetByIdAsync(int id)
-        {
-            return await context.Pets
-                .Include(x => x.Breed)
-                .Include(x => x.Owner)
-                .FirstOrDefaultAsync(x => x.Id == id);
-        }
+        
 
         public async Task CreateAsync(Pet pet)
         {

@@ -22,12 +22,7 @@ namespace CONTROLLERproject
                 .ToListAsync();
         }
 
-        public async Task<Userr?> GetByIdAsync(int id)
-        {
-            return await context.Users
-                .Include(x => x.EmployeeType)
-                .FirstOrDefaultAsync(x => x.Id == id);
-        }
+      
 
         public async Task<Userr?> LoginAsync( string username, string password)
         {

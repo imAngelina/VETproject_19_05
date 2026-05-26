@@ -23,15 +23,7 @@ namespace CONTROLLERproject
                 .ToListAsync();
         }
 
-        public async Task<List<Appointment>> GetEmployeeAppointmentsAsync(int employeeId)
-        {
-            return await context.Appointments
-                .Include(x => x.Pet)
-                .Include(x => x.Service)
-                .Where(x => x.EmployeeId == employeeId)
-                .ToListAsync();
-        }
-
+       
         public async Task<List<Appointment>> GetClientAppointmentsAsync(int ownerId)
         {
             return await context.Appointments
@@ -41,19 +33,6 @@ namespace CONTROLLERproject
                 .Where(x => x.Pet.OwnerId == ownerId)
                 .ToListAsync();
         }
-
-        public async Task<Appointment?> GetByIdAsync(int id)
-        {
-            return await context.Appointments
-                .Include(x => x.Pet)
-                .Include(x => x.Employee)
-                .Include(x => x.Service)
-                .FirstOrDefaultAsync(x => x.Id == id);
-        }
-
-       
-
-        
 
         public async Task DeleteAsync(int id)
         {

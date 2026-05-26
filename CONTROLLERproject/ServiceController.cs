@@ -20,11 +20,6 @@ namespace CONTROLLERproject
             return await context.Services.ToListAsync();
         }
 
-        public async Task<Service?> GetByIdAsync(int id)
-        {
-            return await context.Services
-                .FirstOrDefaultAsync(x => x.Id == id);
-        }
 
         public async Task CreateAsync(Service service)
         {
