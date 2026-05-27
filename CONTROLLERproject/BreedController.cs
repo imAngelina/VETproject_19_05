@@ -11,8 +11,15 @@ namespace CONTROLLERproject
 {
     public class BreedController
     {
-        private readonly VetContext context = new VetContext();
-
+        private readonly VetContext context;
+        public BreedController()
+        {
+            context = new VetContext();
+        }
+        public BreedController(VetContext c)
+        {
+            context = c;
+        }
 
         public async Task<List<Breed>> GetAllAsync()
         {

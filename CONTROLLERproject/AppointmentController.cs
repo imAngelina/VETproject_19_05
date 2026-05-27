@@ -11,7 +11,16 @@ namespace CONTROLLERproject
 {
     public class AppointmentController
     {
-        private readonly VetContext context = new VetContext();
+        private readonly VetContext context;
+
+        public AppointmentController()
+        {
+            context = new VetContext();
+        }
+        public AppointmentController(VetContext c)
+        {
+            context = c;
+        }
 
         public async Task<List<Appointment>> GetAllAsync()
         {

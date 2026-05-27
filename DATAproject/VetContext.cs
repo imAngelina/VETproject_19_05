@@ -11,6 +11,14 @@ namespace DATAproject
 {
     public class VetContext:DbContext
     {
+        public VetContext(DbContextOptions<VetContext> options) : base(options)
+        {
+        }
+
+        public VetContext()
+        {
+        }
+
         public DbSet<Userr> Users { get; set; }
         public DbSet<Animal> Animals { get; set; }
         public DbSet<Breed> Breeds { get; set; }
@@ -18,13 +26,20 @@ namespace DATAproject
         public DbSet<Service> Services { get; set; }
         public DbSet<Appointment> Appointments { get; set; }
         public DbSet<EmployeeType> EmployeeTypes { get; set; }
+
+
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var builder = new ConfigurationBuilder();
-            builder.AddJsonFile("vetJSON.json");
-            var config = builder.Build();
-            string connectionstring = config.GetConnectionString("DefaultConnection");
-            optionsBuilder.UseSqlServer(connectionstring);
+            if (!optionsBuilder.IsConfigured)
+            {
+                var builder = new ConfigurationBuilder();
+                builder.AddJsonFile("vetJSON.json");
+                var config = builder.Build();
+                string connectionstring = config.GetConnectionString("DefaultConnection");
+                optionsBuilder.UseSqlServer(connectionstring);
+            }
+            
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

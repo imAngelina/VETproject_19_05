@@ -11,9 +11,16 @@ namespace CONTROLLERproject
 {
     public class ServiceController
     {
-        private readonly VetContext context = new VetContext();
+        private readonly VetContext context;
 
-        
+        public ServiceController()
+        {
+            context = new VetContext();
+        }
+        public ServiceController(VetContext c)
+        {
+            context = c;
+        }
 
         public async Task<List<Service>> GetAllAsync()
         {

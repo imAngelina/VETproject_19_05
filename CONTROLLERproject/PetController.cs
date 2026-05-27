@@ -11,8 +11,15 @@ namespace CONTROLLERproject
 {
     public class PetController
     {
-        private readonly VetContext context = new VetContext();
-
+        private readonly VetContext context ;
+        public PetController()
+        {
+            context = new VetContext();
+        }
+        public PetController(VetContext c)
+        {
+            context = c;
+        }
         public async Task<List<Pet>> GetAllAsync()
         {
             return await context.Pets

@@ -11,9 +11,16 @@ namespace CONTROLLERproject
 {
     public class UserController
     {
-        private readonly VetContext context = new VetContext();
+        private readonly VetContext context;
 
-        
+        public UserController()
+        {
+            context = new VetContext();
+        }
+        public UserController(VetContext c)
+        {
+            context = c;
+        }
 
         public async Task<List<Userr>> GetAllAsync()
         {
