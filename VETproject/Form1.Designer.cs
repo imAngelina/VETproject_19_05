@@ -104,9 +104,9 @@
             label3.Font = new Font("Cambria", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.Location = new Point(12, 42);
             label3.Name = "label3";
-            label3.Size = new Size(253, 86);
+            label3.Size = new Size(295, 86);
             label3.TabIndex = 6;
-            label3.Text = "VET CLINIC\r\n \"HAPPINESS\"";
+            label3.Text = "VET CLINIC\r\n \"HAPPAWNESS\"";
             // 
             // label4
             // 
