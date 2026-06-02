@@ -69,7 +69,7 @@ namespace VETproject
                 BreedId = int.Parse(textBox4.Text),
                 OwnerId = UserCurrent.Id
             };
-            if (context.Breeds.Find(a.Id) == null) { MessageBox.Show("invalid id"); return; }
+            if (context.Pets.Find(a.Id) == null) { MessageBox.Show("invalid id"); return; }
             await contr.UpdateAsync(a);
 
             MessageBox.Show("pet updated");

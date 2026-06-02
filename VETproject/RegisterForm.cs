@@ -30,11 +30,16 @@ namespace VETproject
 
         private async void button1_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text) || string.IsNullOrWhiteSpace(textBox4.Text))
+            {
+                MessageBox.Show("enter all the info!");
+                return;
+            }
             var user = new Userr
             {
                 Username = textBox1.Text,
                 Password = textBox2.Text,
-                FullName = textBox3.Text,
+                FullName = textBox4.Text,
                 Role = (UserRole)comboBox1.SelectedItem
             };
             if (context.Users.Any(x => x.Username == user.Username))
