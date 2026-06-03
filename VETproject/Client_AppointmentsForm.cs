@@ -148,7 +148,7 @@ namespace VETproject
 
         private async void button3_Click(object sender, EventArgs e)
         {
-            if (context.Appointments.Find(int.Parse(textBox6.Text)) == null) { MessageBox.Show("invalid id"); return; }
+            if (contr.GetById(int.Parse(textBox6.Text)) == null) { MessageBox.Show("invalid id"); return; }
             await contr.DeleteAsync(int.Parse(textBox6.Text));
 
             MessageBox.Show("appointment deleted");

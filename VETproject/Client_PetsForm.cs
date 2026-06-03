@@ -40,8 +40,8 @@ namespace VETproject
 
         private async void button2_Click(object sender, EventArgs e)
         {
-
-            if (context.Breeds.Find(int.Parse(textBox3.Text)) == null) { MessageBox.Show("invalid breed id"); return; }
+            BreedController b = new BreedController();
+            if (b.GetById(int.Parse(textBox3.Text)) == null) { MessageBox.Show("invalid breed id"); return; }
             Pet a = new Pet
             {
                 Name = textBox1.Text,
@@ -59,8 +59,8 @@ namespace VETproject
 
         private async void button3_Click(object sender, EventArgs e)
         {
-
-            if (context.Breeds.Find(int.Parse(textBox4.Text)) == null) { MessageBox.Show("invalid breed id"); return; }
+            BreedController b = new BreedController();
+            if (b.GetById(int.Parse(textBox4.Text)) == null) { MessageBox.Show("invalid breed id"); return; }
             Pet a = new Pet
             {
                 Id = int.Parse(textBox7.Text),
@@ -69,7 +69,7 @@ namespace VETproject
                 BreedId = int.Parse(textBox4.Text),
                 OwnerId = UserCurrent.Id
             };
-            if (context.Pets.Find(a.Id) == null) { MessageBox.Show("invalid id"); return; }
+            if (contr.GetById(a.Id) == null) { MessageBox.Show("invalid id"); return; }
             await contr.UpdateAsync(a);
 
             MessageBox.Show("pet updated");
@@ -82,7 +82,7 @@ namespace VETproject
         private async void button4_Click(object sender, EventArgs e)
         {
 
-            if (context.Pets.Find(int.Parse(textBox8.Text)) == null) { MessageBox.Show("invalid id"); return; }
+            if (contr.GetById(int.Parse(textBox8.Text)) == null) { MessageBox.Show("invalid id"); return; }
             await contr.DeleteAsync(int.Parse(textBox8.Text));
 
             MessageBox.Show("pet deleted");

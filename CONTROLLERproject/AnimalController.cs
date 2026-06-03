@@ -55,5 +55,10 @@ namespace CONTROLLERproject
                 await context.SaveChangesAsync();
             }
         }
+        public async Task<Animal> GetById(int id)
+        {
+            var a = await context.Animals.FindAsync(id);
+            return a;
+        }
     }
 }

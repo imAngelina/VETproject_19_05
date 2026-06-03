@@ -54,7 +54,7 @@ namespace VETproject
                 Name = textBox4.Text,
                 Price = decimal.Parse(textBox3.Text)
             };
-            if (context.Services.Find(a.Id) == null) { MessageBox.Show("invalid id"); return; }
+            if (contr.GetById(a.Id) == null) { MessageBox.Show("invalid id"); return; }
             await contr.UpdateAsync(a);
 
             MessageBox.Show("service updated");
@@ -66,7 +66,7 @@ namespace VETproject
         private async void button4_Click(object sender, EventArgs e)
         {
 
-            if (context.Services.Find(int.Parse(textBox8.Text)) == null) { MessageBox.Show("invalid id"); return; }
+            if (contr.GetById(int.Parse(textBox8.Text)) == null) { MessageBox.Show("invalid id"); return; }
             await contr.DeleteAsync(int.Parse(textBox8.Text));
 
             MessageBox.Show("service deleted");

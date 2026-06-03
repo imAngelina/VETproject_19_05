@@ -68,5 +68,10 @@ namespace CONTROLLERproject
                 await context.SaveChangesAsync();
             }
         }
+        public async Task<Userr> GetById(int id)
+        {
+            var user = await context.Users.FindAsync(id);
+            return user;
+        }
     }
-    }
+}

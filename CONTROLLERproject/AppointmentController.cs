@@ -78,5 +78,10 @@ namespace CONTROLLERproject
 
             return true;
         }
+        public async Task<Appointment> GetById(int id)
+        {
+            var user = await context.Appointments.FindAsync(id);
+            return user;
+        }
     }
 }
