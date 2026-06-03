@@ -21,7 +21,6 @@ namespace VETproject
             InitializeComponent();
         }
         BreedController contr = new BreedController();
-        VetContext context = new VetContext();
         private void Admin_BreedsForm_Load(object sender, EventArgs e)
         {
 
@@ -36,7 +35,7 @@ namespace VETproject
         private async void button2_Click(object sender, EventArgs e)
         {
             AnimalController acontroller = new AnimalController();
-            if (acontroller.GetById(int.Parse(textBox2.Text)) == null) { MessageBox.Show("invalid animal id"); return; }
+            if (await acontroller.GetById(int.Parse(textBox2.Text)) == null) { MessageBox.Show("invalid animal id"); return; }
             Breed a = new Breed
             {
                 Name = textBox1.Text,
@@ -52,14 +51,14 @@ namespace VETproject
         private async void button3_Click(object sender, EventArgs e)
         {
             AnimalController acontroller = new AnimalController();
-            if (acontroller.GetById(int.Parse(textBox3.Text)) == null) { MessageBox.Show("invalid animal id"); return; }
+            if (await acontroller.GetById(int.Parse(textBox3.Text)) == null) { MessageBox.Show("invalid animal id"); return; }
             Breed a = new Breed
             {
                 Id = int.Parse(textBox7.Text),
                 Name = textBox4.Text,
                 AnimalId = int.Parse(textBox3.Text)
             };
-            if (contr.GetById(a.Id) == null) { MessageBox.Show("invalid id"); return; }
+            if (await contr.GetById(a.Id) == null) { MessageBox.Show("invalid id"); return; }
             await contr.UpdateAsync(a);
 
             MessageBox.Show("breed updated");
@@ -70,7 +69,7 @@ namespace VETproject
 
         private async void button4_Click(object sender, EventArgs e)
         {
-            if (contr.GetById(int.Parse(textBox8.Text)) == null) { MessageBox.Show("invalid id"); return; }
+            if (await contr.GetById(int.Parse(textBox8.Text)) == null) { MessageBox.Show("invalid id"); return; }
             await contr.DeleteAsync(int.Parse(textBox8.Text));
 
             MessageBox.Show("breed deleted");

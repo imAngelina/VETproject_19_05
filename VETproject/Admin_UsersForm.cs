@@ -26,7 +26,6 @@ namespace VETproject
             comboBox2.DataSource = Enum.GetValues(typeof(UserRole));
         }
         UserController userController = new UserController();
-        VetContext context = new VetContext();
         private async void button1_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = await userController.GetAllAsync();
@@ -34,6 +33,7 @@ namespace VETproject
 
         private async void button2_Click(object sender, EventArgs e)
         {
+        VetContext context = new VetContext();
 
             var user = new Userr
             {
@@ -73,7 +73,7 @@ namespace VETproject
                 FullName = textBox4.Text,
                 Role = (UserRole)comboBox2.SelectedItem
             };
-            if (userController.GetById(user.Id) == null) { MessageBox.Show("invalid id"); return; }
+            if (await userController.GetById(user.Id) == null) { MessageBox.Show("invalid id"); return; }
             await userController.UpdateAsync(user);
 
             MessageBox.Show("User updated");
@@ -85,7 +85,7 @@ namespace VETproject
 
         private async void button4_Click(object sender, EventArgs e)
         {
-            if (userController.GetById(int.Parse(textBox8.Text)) == null) { MessageBox.Show("invalid id"); return; }
+            if (await userController.GetById(int.Parse(textBox8.Text)) == null) { MessageBox.Show("invalid id"); return; }
             await userController.DeleteAsync(int.Parse(textBox8.Text));
 
             MessageBox.Show("User deleted");

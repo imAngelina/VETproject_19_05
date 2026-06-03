@@ -26,7 +26,6 @@ namespace VETproject
         }
         public Userr CurrentUser { get; set; }
         AppointmentController contr = new AppointmentController();
-        VetContext context = new VetContext();
         private async void button1_Click(object sender, EventArgs e)
         {
             int ownerId = CurrentUser.Id;
@@ -38,6 +37,7 @@ namespace VETproject
 
         private async void button2_Click(object sender, EventArgs e)
         {
+             VetContext context = new VetContext();
             DateTime selectedDate = dateTimePicker1.Value.Date;
 
 
@@ -148,7 +148,7 @@ namespace VETproject
 
         private async void button3_Click(object sender, EventArgs e)
         {
-            if (contr.GetById(int.Parse(textBox6.Text)) == null) { MessageBox.Show("invalid id"); return; }
+            if (await contr.GetById(int.Parse(textBox6.Text)) == null) { MessageBox.Show("invalid id"); return; }
             await contr.DeleteAsync(int.Parse(textBox6.Text));
 
             MessageBox.Show("appointment deleted");
