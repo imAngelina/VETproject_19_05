@@ -169,9 +169,10 @@
             label3.Font = new Font("Cambria", 12F, FontStyle.Italic);
             label3.Location = new Point(136, 186);
             label3.Name = "label3";
-            label3.Size = new Size(77, 23);
+            label3.Size = new Size(109, 23);
             label3.TabIndex = 2;
-            label3.Text = "Breed id";
+            label3.Text = "Breed name";
+            label3.Click += label3_Click;
             // 
             // label2
             // 

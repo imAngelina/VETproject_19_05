@@ -134,9 +134,10 @@
             label2.Font = new Font("Cambria", 12F, FontStyle.Italic);
             label2.Location = new Point(154, 173);
             label2.Name = "label2";
-            label2.Size = new Size(89, 23);
+            label2.Size = new Size(110, 23);
             label2.TabIndex = 9;
-            label2.Text = "Animal id";
+            label2.Text = "Animal type";
+            label2.Click += label2_Click;
             // 
             // button2
             // 
@@ -207,9 +208,9 @@
             label3.Font = new Font("Cambria", 12F, FontStyle.Italic);
             label3.Location = new Point(185, 210);
             label3.Name = "label3";
-            label3.Size = new Size(89, 23);
+            label3.Size = new Size(110, 23);
             label3.TabIndex = 13;
-            label3.Text = "Animal id";
+            label3.Text = "Animal type";
             // 
             // label9
             // 

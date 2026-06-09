@@ -1,5 +1,5 @@
 {
   "ConnectionStrings": {
-    "DefaultConnection": "Server=DESKTOP-QM74TGF\\SQLEXPRESS;Database=VETproject_18_05;Trusted_Connection=True;TrustServerCertificate=True"
+    "DefaultConnection": "Server=STUDENT7;Database=VETproject_18_05;Trusted_Connection=True;TrustServerCertificate=True"
   }
 }

@@ -40,13 +40,15 @@ namespace VETproject
 
         private async void button2_Click(object sender, EventArgs e)
         {
-            BreedController b = new BreedController();
-            if (await b.GetById(int.Parse(textBox3.Text)) == null) { MessageBox.Show("invalid breed id"); return; }
+            BreedController b = new BreedController(); 
+            var v = await b.GetByName(textBox3.Text);
+            if (await b.GetByName(textBox3.Text) == null) { MessageBox.Show("invalid breed"); return; }
+           
             Pet a = new Pet
             {
                 Name = textBox1.Text,
                 Age = int.Parse(textBox2.Text),
-                BreedId = int.Parse(textBox3.Text),
+                BreedId = v.Id,
                 OwnerId = UserCurrent.Id
             };
             await contr.CreateAsync(a);
@@ -60,13 +62,14 @@ namespace VETproject
         private async void button3_Click(object sender, EventArgs e)
         {
             BreedController b = new BreedController();
-            if (await b.GetById(int.Parse(textBox4.Text)) == null) { MessageBox.Show("invalid breed id"); return; }
+            if (await b.GetByName(textBox4.Text) == null) { MessageBox.Show("invalid breed"); return; }
+            var v = await b.GetByName(textBox4.Text);
             Pet a = new Pet
             {
                 Id = int.Parse(textBox7.Text),
                 Name = textBox6.Text,
                 Age = int.Parse(textBox5.Text),
-                BreedId = int.Parse(textBox4.Text),
+                BreedId = v.Id,
                 OwnerId = UserCurrent.Id
             };
             if (await contr.GetById(a.Id) == null) { MessageBox.Show("invalid id"); return; }
@@ -90,6 +93,11 @@ namespace VETproject
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

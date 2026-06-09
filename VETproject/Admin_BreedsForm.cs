@@ -29,17 +29,18 @@ namespace VETproject
         private async void button1_Click(object sender, EventArgs e)
         {
             List<Breed> breeds = await contr.GetAllAsync();
-            dataGridView1.DataSource = breeds.Select(x=>new {x.Id, x.Name, x.Animal.Type}).ToList();
+            dataGridView1.DataSource = breeds.Select(x => new { x.Id, x.Name, x.Animal.Type }).ToList();
         }
 
         private async void button2_Click(object sender, EventArgs e)
         {
             AnimalController acontroller = new AnimalController();
-            if (await acontroller.GetById(int.Parse(textBox2.Text)) == null) { MessageBox.Show("invalid animal id"); return; }
+            if (await acontroller.GetByName(textBox2.Text) == null) { MessageBox.Show("invalid animal"); return; }
+            var b = await acontroller.GetByName(textBox2.Text);
             Breed a = new Breed
             {
                 Name = textBox1.Text,
-                AnimalId = int.Parse(textBox2.Text)
+                AnimalId =b.Id
             };
             await contr.CreateAsync(a);
 
@@ -51,12 +52,13 @@ namespace VETproject
         private async void button3_Click(object sender, EventArgs e)
         {
             AnimalController acontroller = new AnimalController();
-            if (await acontroller.GetById(int.Parse(textBox3.Text)) == null) { MessageBox.Show("invalid animal id"); return; }
+            if (await acontroller.GetByName(textBox3.Text) == null) { MessageBox.Show("invalid animal"); return; }
+            var b = await acontroller.GetByName(textBox3.Text);
             Breed a = new Breed
             {
                 Id = int.Parse(textBox7.Text),
                 Name = textBox4.Text,
-                AnimalId = int.Parse(textBox3.Text)
+                AnimalId = b.Id
             };
             if (await contr.GetById(a.Id) == null) { MessageBox.Show("invalid id"); return; }
             await contr.UpdateAsync(a);
@@ -74,6 +76,11 @@ namespace VETproject
 
             MessageBox.Show("breed deleted");
             textBox8.Clear();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

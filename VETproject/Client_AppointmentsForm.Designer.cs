@@ -221,9 +221,9 @@
             label3.Font = new Font("Cambria", 12F, FontStyle.Italic);
             label3.Location = new Point(73, 115);
             label3.Name = "label3";
-            label3.Size = new Size(88, 23);
+            label3.Size = new Size(120, 23);
             label3.TabIndex = 2;
-            label3.Text = "Service id";
+            label3.Text = "Service name";
             // 
             // label2
             // 
@@ -231,9 +231,9 @@
             label2.Font = new Font("Cambria", 12F, FontStyle.Italic);
             label2.Location = new Point(73, 78);
             label2.Name = "label2";
-            label2.Size = new Size(109, 23);
+            label2.Size = new Size(172, 23);
             label2.TabIndex = 1;
-            label2.Text = "Employee id";
+            label2.Text = "Employee full name";
             // 
             // label1
             // 
@@ -241,9 +241,9 @@
             label1.Font = new Font("Cambria", 12F, FontStyle.Italic);
             label1.Location = new Point(73, 41);
             label1.Name = "label1";
-            label1.Size = new Size(56, 23);
+            label1.Size = new Size(88, 23);
             label1.TabIndex = 0;
-            label1.Text = "Pet id";
+            label1.Text = "Pet name";
             // 
             // tabPage3
             // 

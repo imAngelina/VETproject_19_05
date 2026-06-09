@@ -57,9 +57,13 @@ namespace CONTROLLERproject
         }
         public async Task<bool> IsAppointmentTakenAsync(DateTime dateTime, int employeeId)
         {
+            const int slotMinutes = 30;
+            var newEnd = dateTime.AddMinutes(slotMinutes);
+
             return await context.Appointments
                 .AnyAsync(x => x.EmployeeId == employeeId
-                            && x.DateTime == dateTime);
+                            && x.DateTime < newEnd
+                            && dateTime < x.DateTime.AddMinutes(slotMinutes));
         }
 
         public async Task<bool> CreateAppointmentAsync(Appointment appointment)

@@ -57,7 +57,7 @@ namespace VETproject
 
             var pet = await context.Pets
                 .FirstOrDefaultAsync(x =>
-                    x.Id == int.Parse(textBox1.Text) &&
+                    x.Name == textBox1.Text &&
                     x.OwnerId == CurrentUser.Id);
 
             if (pet == null)
@@ -71,7 +71,7 @@ namespace VETproject
 
             var employee = await context.Users
                 .FirstOrDefaultAsync(x =>
-                    x.Id == int.Parse(textBox2.Text)
+                    x.FullName == textBox2.Text
                     && x.Role == UserRole.Employee);
 
             if (employee == null)
@@ -85,7 +85,7 @@ namespace VETproject
 
             var service = await context.Services
                 .FirstOrDefaultAsync(x =>
-                    x.Id == int.Parse(textBox3.Text));
+                    x.Name == textBox3.Text);
 
             if (service == null)
             {

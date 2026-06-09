@@ -126,7 +126,7 @@
             BackColor = SystemColors.GradientActiveCaption;
             BackgroundImage = Properties.Resources.How_to_Choose_the_Best_Pet_for_Your_Family__First_Time_Guide;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(875, 498);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(button2);
